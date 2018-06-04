@@ -2,24 +2,20 @@ DROP TABLE IF EXISTS people;
 
 CREATE TABLE people (
   id INT NOT NULL AUTO_INCREMENT,
-  first_name VARCHAR2(255) NOT NULL DEFAULT '',
-  last_name VARCHAR2(255) NOT NULL DEFAULT '',
-  mobile VARCHAR2(20),
+  first_name VARCHAR(255) NOT NULL DEFAULT '',
+  last_name VARCHAR(255) NOT NULL DEFAULT '',
+  mobile VARCHAR(20),
   birthday DATE DEFAULT NULL,
-  home_id SMALLINT DEFAULT NULL,
+  home_id INT DEFAULT NULL,
   PRIMARY KEY (id));
-
-  ALTER TABLE people
-  ADD FOREIGN KEY (home_id)
-  REFERENCES homes(id);
 
 
 DROP TABLE IF EXISTS homes;
 
 CREATE TABLE homes (
   id INT NOT NULL AUTO_INCREMENT,
-  address VARCHAR2(255) NOT NULL DEFAULT '',
-  homenumber VARCHAR2(255) NOT NULL DEFAULT '',
+  address VARCHAR(255) NOT NULL DEFAULT '',
+  homenumber VARCHAR(255) NOT NULL DEFAULT '',
   PRIMARY KEY (id)
 );
 
@@ -27,13 +23,14 @@ DROP TABLE IF EXISTS movies;
 
 CREATE TABLE movies (
   id INT PRIMARY KEY AUTO_INCREMENT,
-  title VARCHAR2(100) NOT NULL UNIQUE,
+  title VARCHAR(100) NOT NULL UNIQUE,
   runtime SMALLINT NOT NULL,
-  genre VARCHAR2(50),
-  imdb_score NUMBER(10,1),
+  genre VARCHAR(50),
+  imdb_score DECIMAL(10,1),
   rating VARCHAR(10)
 );
 
-DROP SEQUENCE hibernate_sequence;
+  ALTER TABLE people
+  ADD FOREIGN KEY (home_id)
+  REFERENCES homes(id);
 
-CREATE SEQUENCE hibernate_sequence;
