@@ -302,7 +302,7 @@ Output all information for all people and their home information
 
 Once you have figured out the correct queries for each step, 
 save a copy in a file called `src/main/resources/script.sql`. This will be how you submit this assignment. 
-If at any time you need to reset the database, you can re-import the database from the .sql file. 
+If at any time you need to reset the database, you can re-import the database from `src/main/resources/schema-h2.sql`. 
 
 Add the following movies to the `movies` table using an insert statement:
 
