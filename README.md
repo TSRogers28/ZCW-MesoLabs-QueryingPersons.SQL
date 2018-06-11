@@ -29,7 +29,7 @@ VALUES ('Smith', 'John', '230-4293', '1973-01-23');
 After doing that insert, go ahead and run all the statements in the `data-h2.sql` file.  That should build out your
 database enough to get started.  Feel free to add more people, though.
 
-My suggestion for the following stuff is, in the H2 console, leave the first line as a `SELECT *` from whatever tables
+My suggestion for the following stuff is, in the Mysql console, leave the first line as a `SELECT *` from whatever tables
 you're querying.  Then, after that, run your queries.  That way you can compare the results of your query with the 
 data in the table.
 
